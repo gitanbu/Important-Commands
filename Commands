@@ -1,0 +1,14 @@
+           Create a folder in name logfiles on C drive
+
+   New-Item -Path "c:\" -Name "logfiles" -ItemType "directory"
+   
+           Create a anbu folder on C:\logfile
+          
+   New-Item -Path "c:\logfiles\anbu" -Name "logfiles" -ItemType "directory"
+   
+         Copy a folder recurselvely to remote server.
+         
+ Copy-Item -Path '\\192.168.56.112\c$\logfiles' -Destination \\192.168.56.120\c$\ -Recurse
+ 
+   
+   
