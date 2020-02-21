@@ -1,3 +1,19 @@
-   copy a file from linux to windows using openssh software
+  Copy a file from linux to windows using openssh software
   
 scp -r filename administrator@192.168.56.112:C:/Users 
+
+   
+  Copy a file from container to server.
+  
+sshpass -p 'remote_server_password'  rsync -e "ssh -o StrictHostKeyChecking=no" -avzh  /home/jenkins/workspace/QBASE/QBASE_Deploy/QBase_Build-1.0.ear servername@IPaddress:/home/user/Deploy_Files/
+
+  Login from container to server
+  
+sshpass -p 'remote_server_password' ssh -o StrictHostKeyChecking=no remoteservername@IPaddress
+
+  Run a script on remote server from local machine
+  
+sshpass -p 'remote_server_password' ssh -o StrictHostKeyChecking=no remoteservername@IPaddress 'bash /home/awcp0012usr/LogClear.sh'
+
+  
+
