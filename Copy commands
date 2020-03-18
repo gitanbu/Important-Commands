@@ -15,5 +15,9 @@ sshpass -p 'remote_server_password' ssh -o StrictHostKeyChecking=no remoteserver
   
 sshpass -p 'remote_server_password' ssh -o StrictHostKeyChecking=no remoteservername@IPaddress 'bash /home/awcp0012usr/LogClear.sh'
 
+  Copy a directory but exclude a file
+
+rsync -av -e ssh --exclude='cluster.properties' /home/jira/AppHome/ root@192.168.56.129:/tmp/
+
   
 
