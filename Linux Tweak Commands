@@ -37,3 +37,10 @@ journalctl --vacuum-time=5d
 
   Remove entire Journal log
 find /var/log/journal -name "*.journal" | xargs sudo rm 
+
+  File based 
+  
+journalctl --vacuum-files=2    ->  Note that this won’t delete any journal files that are actively in use.
+
+journalctl --verify   -> For Verfication
+ 
