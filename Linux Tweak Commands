@@ -9,3 +9,23 @@ Clear PageCache only.
 Clear PageCache, dentries and inodes.
 
 # sync; echo 3 > /proc/sys/vm/drop_caches 
+
+----------------------------
+
+journal logs
+=============
+
+Yes you can delete everything inside of /var/log/journal/* but do not delete the directory itself. You can also query journalctl to find out how much disk space it's consuming:
+
+$ journalctl --disk-usage
+Journals take up 3.8G on disk.
+You can control the size of this directory using this parameter in your /etc/systemd/journald.conf:
+
+SystemMaxUse=50M
+You can force a log rotation:
+
+$ sudo systemctl kill --kill-who=main --signal=SIGUSR2 systemd-journald.service
+NOTE: You might need to restart the logging service to force a log rotation, if the above signaling method does not do it. You can restart the service like so:
+
+$ sudo systemctl restart systemd-journald.service
+
