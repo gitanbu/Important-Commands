@@ -33,4 +33,7 @@ $ sudo systemctl restart systemd-journald.service
 journalctl --vacuum-size=500M
 
   Time Based
-journalctl --vacuum-time=10d
+journalctl --vacuum-time=5d
+
+  Remove entire Journal log
+find /var/log/journal -name "*.journal" | xargs sudo rm 
