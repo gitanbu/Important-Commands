@@ -29,3 +29,5 @@ NOTE: You might need to restart the logging service to force a log rotation, if 
 
 $ sudo systemctl restart systemd-journald.service
 
+journalctl --vacuum-size=500M
+
