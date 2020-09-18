@@ -1,0 +1,2 @@
+ *Download offline package with dependencies * 
+yumdownloader  --downloadonly --downloaddir=. glibc --resolve
