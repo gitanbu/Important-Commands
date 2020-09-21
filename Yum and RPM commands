@@ -1,3 +1,5 @@
  Download offline package with dependencies
  
-yumdownloader  --downloadonly --downloaddir=. glibc --resolve
+#yumdownloader  --downloadonly --downloaddir=. glibc --resolve
+
+#yum install --downloadonly --downloaddir=/var/ jenkins
