@@ -1,0 +1,7 @@
+File upload using curl command to nexus repository
+
+curl --insecure --fail --show-error -v -u UserID:password --upload-file nov.zip  http://IPAddress/nexus/repository/test11/ 
+
+Download a file with userID and password using wget command.
+
+wget --user=admin --password='Password' http://nexus.anbu.biz:8081/nexus/repository/test11/Confluence.zip
