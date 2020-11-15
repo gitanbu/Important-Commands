@@ -6,3 +6,8 @@ find . -type d -mtime +120 -print | xargs -I {} mv "{}" /bcci/datadir/13-may-bkp
 Move a files to another folder older 120 days
 
 find . -type f -mtime +120 -print | xargs -I {} mv "{}" /bcci/datadir/13-may-bkp/
+
+
+Delete all files to which no one access more then 100 days and not modified more then 200 days:
+
+find . -type f -atime +100 -mtime 200 -delete
