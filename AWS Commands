@@ -1,3 +1,11 @@
  S3 file copy
  
  aws s3 cp /opt/filename.zip s3://bucket-name/
+
+
+
+AWS Lambda Commands
+
+aws lambda invoke --function-name Hello_World --region us-east-1  out.txt
+
+aws lambda list-functions --region us-east-1
